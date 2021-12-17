@@ -3,7 +3,12 @@ package javacore.hello;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Example {}
+class Example {
+	static int counter = 0;
+	public Example() {
+		Example.counter += 1;
+	}
+}
 class MountainBike extends Bicycle{
 	// new fields and methods defining
 	// a mountain bike would go here
@@ -57,6 +62,14 @@ public class Main {
 		Main.demo();
 		Main.demoArray();
 		Main.demoMatrix();
+		// static field
+		Example exam1 = new Example();
+		System.out.println("Example : " + Example.counter);
+		Example exam2 = new Example();
+		System.out.println("Example : " + Example.counter);
+		Example exam3 = new Example();
+		System.out.println("Example : " + Example.counter);
+		FactoryMethod.example();
 	}
 
 	public static void demo() {
@@ -88,6 +101,7 @@ public class Main {
 		for(String coffee : copyTo) {
 			System.out.printf("%s\n", coffee);
 		}
+		
 	}
 	
 	public static void printArray(int[] array) {
