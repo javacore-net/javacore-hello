@@ -70,6 +70,7 @@ public class Main {
 		Example exam3 = new Example();
 		System.out.println("Example : " + Example.counter);
 		FactoryMethod.example();
+		AbstractFactory.demo();
 	}
 
 	public static void demo() {
